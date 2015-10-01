@@ -13,8 +13,9 @@ CentOS/RedHat, etc:
 The following is needed for make install or make bintar:
 
 patchelf  -- You can find a package for it here:
-             http://hydra.nixos.org/project/patchelf/jobstatus
-             Click the number to the left of the correct package
+             http://hydra.nixos.org/jobset/patchelf/master
+             Click the number to the left of the latest green build,
+             then click the number to the left of the correct package
 
 
 To build on Linux:
@@ -27,6 +28,8 @@ To build on Linux:
 3) make
 4) make check
 5) sudo make install (or sudo make bintar)
+  a) If make install was used: /usr/bin/env bash scripts/installer.sh
+  b) If make bintar was used: run installer.sh from the root of the archive after extraction
 6) ln -s /usr/share/nova-agent/<VERSION>/etc/nova-agent.init /etc/init.d/nova-agent
 7) update-rc.d to add to appropriate runlevels
 
